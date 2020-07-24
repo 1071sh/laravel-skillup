@@ -2,6 +2,7 @@
 
 ## Version
 
+-   Laravel 6.18.26
 -   nginx
 -   php:7.4-fpm-buster
 -   mysql
@@ -39,6 +40,38 @@ mysql に接続
 mysql -u root -p
 ```
 
+## 環境の再構築
+
+php コンテナに入る
+
+```
+$ docker-compose exec app bash
+```
+
+composer のインストール
+
+```
+$ composer install
+```
+
+.env ファイルのコピー
+
+```
+$ cp .env.example .env
+```
+
+key:generate の生成
+
+```
+$ php artisan key:generate
+```
+
+マイグレーションの実行
+
+```
+$ php artisan migrate
+```
+
 ## URL
 
 Laravel ウェルカム画面の表示 http://localhost:9000
@@ -51,7 +84,7 @@ phpmyadmin http://localhost:3000
 
 ```
 CONNECTION=mysql
-HOST=127.0.0.1
+HOST=mysql
 PORT=3306
 DATABASE=docker_db
 USERNAME=docker
