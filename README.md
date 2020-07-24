@@ -1,4 +1,4 @@
-# 自由課題
+# Skillup 課題
 
 ## Version
 
@@ -41,7 +41,8 @@ mysql -u root -p
 
 ## URL
 
-Laravel ウェルカム画面の表示　http://localhost:9000
+Laravel ウェルカム画面の表示 http://localhost:9000
+
 phpmyadmin http://localhost:3000
 
 ## データベース
